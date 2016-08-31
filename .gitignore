@@ -3,3 +3,7 @@
 ################################################################################
 
 /WebApplication/ClassLibraryJson/bin/Debug
+/WebApplication/ClassLibraryJson/obj/Debug
+/WebApplication/packages
+/WebApplication/WebApplication/bin
+/WebApplication/WebApplication/obj/Debug
