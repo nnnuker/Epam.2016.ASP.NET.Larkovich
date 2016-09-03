@@ -7,3 +7,5 @@
 /WebApplication/packages
 /WebApplication/WebApplication/bin
 /WebApplication/WebApplication/obj/Debug
+/WebApplication/WebApplication.Tests/bin/Debug
+/WebApplication/WebApplication.Tests/obj/Debug
