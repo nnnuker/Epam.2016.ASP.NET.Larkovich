@@ -9,3 +9,8 @@
 /WebApplication/WebApplication/obj/Debug
 /WebApplication/WebApplication.Tests/bin/Debug
 /WebApplication/WebApplication.Tests/obj/Debug
+/Controllers/HomeTask/bin
+/Controllers/packages
+/Controllers/WebApplication/bin
+/Controllers/WebApplication/obj/Debug
+/Controllers/HomeTask/obj/Debug
