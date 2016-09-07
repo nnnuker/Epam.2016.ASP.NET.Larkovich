@@ -18,7 +18,7 @@ namespace HomeTask.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            return View("Person", users[0]);
+            return View("Person", users[1]);
         }
 
         public ActionResult ChangeSide(bool? side)
@@ -29,7 +29,7 @@ namespace HomeTask.Controllers
             }
             else
             {
-                return View("Person", users[0]);
+                return View("Person", users[1]);
             }
         }
     }

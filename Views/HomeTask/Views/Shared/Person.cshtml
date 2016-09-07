@@ -1,48 +1,26 @@
 ﻿@model HomeTask.Models.UserModel
-
 @{
     ViewBag.Title = "Person";
 }
 
 @section Header{
-    <div id="header">
-        @if (Model.IsDarkSide)
-    {
-            @Html.Partial("_HeaderDarkPartial")
-        }
-        else
-        {
-            @Html.Partial("_HeaderLightPartial")
-        }
-    </div>
+    @(Model.IsDarkSide ? Html.Partial("_HeaderDarkPartial") : Html.Partial("_HeaderLightPartial"))
 }
 
 @section Body{
-    <div id="body">
-        @Model.PersonInfo
-    </div>
+    @Model.PersonInfo
 }
 
 @section Footer{
-    <div id="footer">
-        @*@Ajax.ActionLink("Change", "ChangeSide", new AjaxOptions
-            {
-                OnComplete = "onChangeSide",
-            })*@
-        @Html.ActionLink("Change side", "ChangeSide", new { side = Model.IsDarkSide }, new { @class = "btn btn-default" })
+    <input type="text" value=@Model.IsDarkSide.ToString().ToLower() id="isDarkSide" hidden />
+
+    <div align="center">
+        @Html.ActionLink("Change side", "ChangeSide", new { side = Model.IsDarkSide },
+        new { @class = "btn btn-default", id = "changeSideButton" })
     </div>
+    
 }
 
 @section Scripts{
-    <script>
-        //function onChangeSide() {
-        //    var elem = document.getElementById('navbarId');
-        //    if (elem.className == 'navbar navbar-inverse navbar-fixed-top') {
-        //        elem.className = 'navbar navbar-default navbar-fixed-top';
-        //    }
-        //    else {
-        //        elem.className = 'navbar navbar-inverse navbar-fixed-top';
-        //    }
-        //}
-    </script>
+    <script src="~/Scripts/scriptSide.js"></script>
 }
