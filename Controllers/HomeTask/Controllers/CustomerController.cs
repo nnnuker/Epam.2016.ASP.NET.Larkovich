@@ -1,7 +1,9 @@
-﻿using HomeTask.Models;
+﻿using HomeTask.Infrastructure;
+using HomeTask.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 
@@ -9,32 +11,28 @@ namespace HomeTask.Controllers
 {
     public class CustomerController : Controller
     {
-        [HttpGet]
-        [ActionName("Add-User")]
-        public ActionResult AddUser()
-        {
-            return null;
-        }
+        private Repository repository = new Repository();
 
         [HttpPost]
         [ActionName("Add-User")]
-        public ActionResult AddUser(UserModel user)
+        public async Task<ActionResult> AddUser(UserModel user)
         {
-            return null;
+            var users = await repository.AddUser(user);
+            return View(users);
         }
 
         [HttpGet]
         [ActionName("User-List")]
         public ActionResult UserList()
         {
-            return null;
+            return View();
         }
 
         [HttpPost]
         [ActionName("User-List")]
         public JsonResult UserList(string submit)
         {
-            return Json("Data", JsonRequestBehavior.AllowGet);
+            return Json("Some data", JsonRequestBehavior.AllowGet);
         }
     }
 }
