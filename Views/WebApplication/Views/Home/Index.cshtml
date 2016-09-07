@@ -1,0 +1,23 @@
+﻿@model string[]
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    This is a list:
+    <div> 
+        @foreach(var name in Model)
+        {
+            <span><b>@name</b></span>
+        }
+    </div>
+</body>
+</html>

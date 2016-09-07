@@ -1,0 +1,48 @@
+﻿@model HomeTask.Models.UserModel
+
+@{
+    ViewBag.Title = "Person";
+}
+
+@section Header{
+    <div id="header">
+        @if (Model.IsDarkSide)
+    {
+            @Html.Partial("_HeaderDarkPartial")
+        }
+        else
+        {
+            @Html.Partial("_HeaderLightPartial")
+        }
+    </div>
+}
+
+@section Body{
+    <div id="body">
+        @Model.PersonInfo
+    </div>
+}
+
+@section Footer{
+    <div id="footer">
+        @*@Ajax.ActionLink("Change", "ChangeSide", new AjaxOptions
+            {
+                OnComplete = "onChangeSide",
+            })*@
+        @Html.ActionLink("Change side", "ChangeSide", new { side = Model.IsDarkSide }, new { @class = "btn btn-default" })
+    </div>
+}
+
+@section Scripts{
+    <script>
+        //function onChangeSide() {
+        //    var elem = document.getElementById('navbarId');
+        //    if (elem.className == 'navbar navbar-inverse navbar-fixed-top') {
+        //        elem.className = 'navbar navbar-default navbar-fixed-top';
+        //    }
+        //    else {
+        //        elem.className = 'navbar navbar-inverse navbar-fixed-top';
+        //    }
+        //}
+    </script>
+}

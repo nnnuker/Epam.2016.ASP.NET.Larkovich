@@ -14,3 +14,8 @@
 /Controllers/WebApplication/bin
 /Controllers/WebApplication/obj/Debug
 /Controllers/HomeTask/obj/Debug
+/Views/HomeTask/obj/Debug
+/Views/HomeTask/bin
+/Views/packages
+/Views/WebApplication/bin
+/Views/WebApplication/obj/Debug
