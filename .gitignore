@@ -19,3 +19,6 @@
 /Views/packages
 /Views/WebApplication/bin
 /Views/WebApplication/obj/Debug
+/Controllers/HomeTask/obj/Release
+/Controllers/HomeTask_ControllerFactory/bin
+/Controllers/HomeTask_ControllerFactory/obj/Debug

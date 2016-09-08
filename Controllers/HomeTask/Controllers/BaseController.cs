@@ -8,15 +8,9 @@ namespace HomeTask.Controllers
 {
     public class BaseController : Controller
     {
-        // GET: Base
-        public ActionResult Index()
-        {
-            return View();
-        }
-
         protected override void HandleUnknownAction(string actionName)
         {
-            
+            Response.Write("404 error");
             //base.HandleUnknownAction(actionName);
         }
     }

@@ -9,23 +9,29 @@ using System.Web.Mvc;
 
 namespace HomeTask.Controllers
 {
+    //[Route("{values(User|Customer)}")]
     public class CustomerController : Controller
     {
-        private Repository repository = new Repository();
+        [HttpGet]
+        [ActionName("Add-User")]
+        public ActionResult AddUser()
+        {
+            return View("AddUser");
+        }
 
         [HttpPost]
         [ActionName("Add-User")]
         public async Task<ActionResult> AddUser(UserModel user)
         {
-            var users = await repository.AddUser(user);
-            return View(users);
+            var users = await Repository.AddUser(user);
+            return View("View", users);
         }
 
         [HttpGet]
         [ActionName("User-List")]
         public ActionResult UserList()
         {
-            return View();
+            return View("View", Repository.Get());
         }
 
         [HttpPost]

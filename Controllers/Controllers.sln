@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication", "WebApplication\WebApplication.csproj", "{992CF99C-00D5-4B34-A519-6DC4E1CC400E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeTask", "HomeTask\HomeTask.csproj", "{4B909213-7CF9-4F3B-A2E1-9ED2D09A2BF5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeTask_ControllerFactory", "HomeTask_ControllerFactory\HomeTask_ControllerFactory.csproj", "{317621D2-ECCD-479A-B558-DF5C367884F9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -14,13 +16,15 @@ Global
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{992CF99C-00D5-4B34-A519-6DC4E1CC400E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{992CF99C-00D5-4B34-A519-6DC4E1CC400E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{992CF99C-00D5-4B34-A519-6DC4E1CC400E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{992CF99C-00D5-4B34-A519-6DC4E1CC400E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4B909213-7CF9-4F3B-A2E1-9ED2D09A2BF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4B909213-7CF9-4F3B-A2E1-9ED2D09A2BF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4B909213-7CF9-4F3B-A2E1-9ED2D09A2BF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4B909213-7CF9-4F3B-A2E1-9ED2D09A2BF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{317621D2-ECCD-479A-B558-DF5C367884F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{317621D2-ECCD-479A-B558-DF5C367884F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{317621D2-ECCD-479A-B558-DF5C367884F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{317621D2-ECCD-479A-B558-DF5C367884F9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

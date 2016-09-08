@@ -9,11 +9,20 @@ namespace HomeTask.Controllers
 {
     public class AdminController : Controller
     {
-        // GET: Admin
+
         [OnlyLocal]
-        public ActionResult Index()
+        public ActionResult Edit(int id)
         {
-            return View();
+            var user = Repository.Get().First(u=>u.Id == id);
+            user.Age++;
+            return RedirectToAction("User-List", "Customer");
+        }
+
+        [OnlyLocal]
+        public ActionResult Delete(int id)
+        {
+            Repository.DeleteUser(id);
+            return RedirectToAction("User-List", "Customer");
         }
     }
 }
