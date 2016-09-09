@@ -22,3 +22,8 @@
 /Controllers/HomeTask/obj/Release
 /Controllers/HomeTask_ControllerFactory/bin
 /Controllers/HomeTask_ControllerFactory/obj/Debug
+/Models/HomeTask/bin
+/Models/HomeTask/obj/Debug
+/Models/Models/bin
+/Models/Models/obj/Debug
+/Models/packages
