@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using HomeTask.Infrastructure;
+using HomeTask.Models;
 
 namespace HomeTask
 {
@@ -16,6 +18,8 @@ namespace HomeTask
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            ModelBinders.Binders.Add(typeof(Person), new CustomModelBinder());
         }
     }
 }

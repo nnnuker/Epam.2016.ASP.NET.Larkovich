@@ -6,7 +6,7 @@ namespace HomeTask.Controllers
 {
     public class HomeController : Controller
     {
-        private PersonRepo repository = new PersonRepo();
+        private static PersonRepo repository = new PersonRepo();
 
         public ActionResult Index()
         {
@@ -24,6 +24,17 @@ namespace HomeTask.Controllers
         {
             Person person = new Person();
             if (TryUpdateModel(person, formData))
+            {
+                repository.Add(person);
+            }
+            return RedirectToAction("Index");
+        }
+
+        [HttpGet]
+        public ActionResult CreateUserQuery()
+        {
+            Person person = new Person();
+            if (TryUpdateModel(person, new QueryStringValueProvider(this.ControllerContext)))
             {
                 repository.Add(person);
             }
