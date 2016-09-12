@@ -27,3 +27,6 @@
 /Models/Models/bin
 /Models/Models/obj/Debug
 /Models/packages
+/ModelValidation/ModelValidation/bin
+/ModelValidation/ModelValidation/obj/Debug
+/ModelValidation/packages
